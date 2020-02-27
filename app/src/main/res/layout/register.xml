@@ -6,109 +6,119 @@
     android:gravity="center"
     android:background="@drawable/background_parent">
 
-
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_name"
-        android:backgroundTint="@color/textcolorwhite"
-        android:drawableStart="@drawable/icon_name"
-        android:drawablePadding="10sp"
-        android:hint="Enter your name"
-        android:inputType="text"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="10sp"
-        />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_email"
-        android:layout_below="@+id/reg_name"
-        android:backgroundTint="@color/textcolorwhite"
-        android:drawableStart="@drawable/icon_email"
-        android:drawablePadding="10sp"
-        android:hint="Enter your Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="10sp"
-        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_mobile"
-        android:layout_below="@+id/reg_email"
-        android:backgroundTint="@color/textcolorwhite"
-        android:drawableStart="@drawable/icon_mobile"
-        android:drawablePadding="10sp"
-        android:hint="Enter your Mobile"
-        android:inputType="number"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="10sp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_name"
+                android:backgroundTint="@color/textcolorwhite"
+                android:drawableStart="@drawable/icon_name"
+                android:drawablePadding="10sp"
+                android:hint="Enter your name"
+                android:inputType="text"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_password"
-        android:layout_below="@+id/reg_mobile"
-        android:backgroundTint="@color/textcolorwhite"
-        android:drawableStart="@drawable/icon_password"
-        android:drawablePadding="10sp"
-        android:hint="Enter your password"
-        android:inputType="textPassword"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="10sp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_email"
+                android:layout_below="@+id/reg_name"
+                android:backgroundTint="@color/textcolorwhite"
+                android:drawableStart="@drawable/icon_email"
+                android:drawablePadding="10sp"
+                android:hint="Enter your Email"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_confirmpassword"
-        android:layout_below="@+id/reg_password"
-        android:backgroundTint="@color/textcolorwhite"
-        android:drawableStart="@drawable/icon_password"
-        android:drawablePadding="10sp"
-        android:hint="Confirm your Password"
-        android:inputType="textPassword"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="20sp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_mobile"
+                android:layout_below="@+id/reg_email"
+                android:backgroundTint="@color/textcolorwhite"
+                android:drawableStart="@drawable/icon_mobile"
+                android:drawablePadding="10sp"
+                android:hint="Enter your Mobile"
+                android:inputType="number"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/reg_textview"
-        android:layout_below="@id/reg_confirmpassword"
-        android:layout_centerHorizontal="true"
-        android:text="Already registered...click here"
-        android:textColor="@color/textcolorblack"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10sp"
-        android:layout_marginEnd="20sp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_password"
+                android:layout_below="@+id/reg_mobile"
+                android:backgroundTint="@color/textcolorwhite"
+                android:drawableStart="@drawable/icon_password"
+                android:drawablePadding="10sp"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_register"
-        android:layout_below="@id/reg_textview"
-        android:background="@drawable/button_round"
-        android:textColor="@color/textcolorwhite"
-        android:layout_marginTop="30sp"
-        android:text="@string/btn_register"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_centerHorizontal="true"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_confirmpassword"
+                android:layout_below="@+id/reg_password"
+                android:backgroundTint="@color/textcolorwhite"
+                android:drawableStart="@drawable/icon_password"
+                android:drawablePadding="10sp"
+                android:hint="Confirm your Password"
+                android:inputType="textPassword"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_textview"
+                android:layout_below="@id/reg_confirmpassword"
+                android:layout_centerHorizontal="true"
+                android:text="Already registered...click here"
+                android:textColor="@color/textcolorblack"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                android:layout_marginEnd="20sp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_register"
+                android:layout_below="@id/reg_textview"
+                android:background="@drawable/button_round"
+                android:textColor="@color/textcolorwhite"
+                android:layout_marginTop="30sp"
+                android:text="@string/btn_register"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>

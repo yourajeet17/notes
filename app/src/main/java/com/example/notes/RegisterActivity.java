@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import es.dmoral.toasty.Toasty;
+
 public class RegisterActivity extends AppCompatActivity {
     private EditText name,email,mobile,password,cpassword;
     private String username,useremail,userpassword,usermobile,usercpassword;
@@ -47,7 +49,8 @@ public class RegisterActivity extends AppCompatActivity {
                 usercpassword=cpassword.getText().toString();
 
                 if (TextUtils.isEmpty(username)){
-                    Toast.makeText(RegisterActivity.this,"please enter your name",Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(RegisterActivity.this,"please enter your name",Toast.LENGTH_SHORT).show();*/
+                    Toasty.error(RegisterActivity.this,"pls enter your name",Toasty.LENGTH_SHORT).show();
                 }
                 else if (TextUtils.isEmpty(useremail)){
                     Toast.makeText(RegisterActivity.this,"please enter your Email",Toast.LENGTH_SHORT).show();

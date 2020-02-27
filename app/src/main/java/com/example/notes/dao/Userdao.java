@@ -24,5 +24,4 @@ public interface Userdao {
 
     @Query("SELECT * FROM user where mobile=:mobile limit 1")
     User getUserDetail(String mobile);
-
 }

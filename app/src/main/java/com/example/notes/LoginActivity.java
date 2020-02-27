@@ -9,50 +9,42 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class LoginActivity extends AppCompatActivity {
 
-
-    private TextView forget,notregistered;
-    private Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        forget=findViewById(R.id.login_forget);
-        notregistered=findViewById(R.id.login_notregistered);
-        login=findViewById(R.id.btn_login);
-
+        ButterKnife.bind(this);
 
         Intent intent=getIntent();
         if(intent!=null)
         {
             Toast.makeText(LoginActivity.this,intent.getStringExtra("success"),Toast.LENGTH_SHORT).show();
         }
-
-        forget.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i1 = new Intent(getApplicationContext(),ForgetActivity.class);
-                startActivity(i1);
-            }
-        });
-
-        notregistered.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),RegisterActivity.class);
-                startActivity(i2);
-            }
-        });
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i3=new Intent(getApplicationContext(),ForgetActivity.class);
-                startActivity(i3);
-            }
-        });
     }
+
+    @OnClick(R.id.login_forget) void submit()
+    {
+        Intent i1 = new Intent(LoginActivity.this,ForgetActivity.class);
+        startActivity(i1);
+    }
+
+    @OnClick(R.id.btn_login) void login()
+    {
+        Intent i3=new Intent(LoginActivity.this,ForgetActivity.class);
+        startActivity(i3);
+    }
+
+    @OnClick(R.id.login_notregistered) void register(){
+        Intent i2 = new Intent(LoginActivity.this,RegisterActivity.class);
+        startActivity(i2);
+    }
+
 }
 
 

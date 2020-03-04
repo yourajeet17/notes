@@ -4,35 +4,47 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+   style="@style/matchparent"
     tools:context=".LoginActivity"
     android:gravity="center"
     android:background="@drawable/background_parent">
 
-    <ScrollView
+    <FrameLayout
+        style="@style/matchwrap"
+        android:id="@+id/fragcontainer"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        style="@style/matchwrap"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/colorPrimary" />
+
+
+
+
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_height="wrap_content">
+-->
+            <!--<de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_user"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginBottom="50sp"
-                android:src="@drawable/image_user" />
+                android:src="@drawable/image_user" />-->
 
 
             <EditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/image_user"
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:layout_marginBottom="20sp"
@@ -93,8 +105,9 @@
                 android:textColor="@color/textcolorblack"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-        </RelativeLayout>
+        <!--</RelativeLayout>
 
-    </ScrollView>
+   --> <!--</ScrollView>-->
+
 
 </RelativeLayout>

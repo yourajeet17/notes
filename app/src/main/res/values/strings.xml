@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">notes</string>
+    <string name="app_name">Notes</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
     <string name="menu_home">Home</string>
